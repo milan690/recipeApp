@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>CRUD App for 2068 </title>
+        <link rel="stylesheet" href="./CSS/bootstrap.min.css" />
+        <link rel="stylesheet" href="./CSS/style.css" />
+    </head>
+    <body>
+        <div class="container py-4 bg-prim ary">
+            <div class="w-75 mb-4 form-details p-5 mx-auto ">
+                <h2>
+                    Recipe Storing System - Milan Michael Martin
+                </h2>
+                <div class="form-group mb-2">
+                    <label for="dishName" class="mb-2">Name of the Dish </label>
+                    <input type="text " class="form-control" id="dishName" />
+                </div>
+                
+                <div class="form-group mb-2">
+                    <label for="dishCategory" class="mb-2">Category of the Dish</label>
+                    <input type="text " class="form-control" id="dishCategory" />
+                </div>
+                <div class="form-group mb-2">
+                    <label for="recipieDescription" class="mb-2">Recipe of the Dish</label>
+                    <textarea class="form-control" id="recipieDescription"></textarea>
+                </div>
+
+                <button class="btn btn-outline-info" onclick="getProduct()" id="myButton">Add Recipe</button>
+            </div>
+
+            <div class="form-group mb-5 w-75 mx-auto">
+                <h4>Search</h4>
+                <input oninput="searchProduct()" type="search" class="form-control" id="searchInput" />
+            </div>
+
+            <div class="table-responsive w-75 mx-auto">
+                <table class="table">
+                    <thead>
+                        <th>Index</th>
+                        <th>Recipe Name</th>
+                        
+                        <th>Recipe Category</th>
+                        <th>Detailed Recipe</th>
+                        <th class="ps-2">Update</th>
+                        <th class="ps-2">Delete</th>
+                    </thead>
+                    <tbody id="myBody"></tbody>
+                </table>
+            </div>
+        </div>
+
+        <script src="./JS/javascript.js"></script>
+    </body>
+</html>
